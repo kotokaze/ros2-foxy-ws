@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/usr/include/**",
+        "/usr/local/include/**",
+        // "/usr/local/cuda/include/**",
+        "/opt/ros/humble/include/**",
+        "${workspaceFolder}/src/*/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "c99",
+      "cppStandard": "c++17"
+    }
+  ],
+  "version": 4
+}

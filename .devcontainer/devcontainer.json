@@ -1,0 +1,66 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+{
+	"name": "ROS on Docker",
+	"dockerComposeFile": "compose.yml",
+	"service": "app",
+	"workspaceFolder": "/ws",
+
+	// Use this environment variable if you need to bind mount your local source code into a new container.
+	"remoteEnv": {
+		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+	},
+
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": false,
+			"username": "devcontainer"
+		},
+		"ghcr.io/devcontainers/features/desktop-lite:1": {
+			"password": "devcontainer"
+		},
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+		},
+		"ghcr.io/devcontainers/features/git-lfs:1": {
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {
+		},
+		"ghcr.io/devcontainers/features/nvidia-cuda:1": {
+			"installCudnn": true,
+			"installNvtx": true,
+			"installToolkit": true,
+			"cudaVersion": "11.8",
+			"cudnnVersion": "8.6.0.163"
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [ 6080 ],
+	"portsAttributes": {
+		"6080": {
+			"label": "Desktop"
+		}
+	},
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.vscode-pull-request-github",
+				"mhutchie.git-graph",
+				"ms-azuretools.vscode-docker",
+				"ms-iot.vscode-ros",
+				"ms-python.autopep8",
+				"ms-python.isort",
+				"ms-python.mypy-type-checker",
+				"ms-python.pylint",
+				"ms-vscode.cmake-tools",
+				"mutantdino.resourcemonitor",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"VisualStudioExptTeam.intellicode-api-usage-examples",
+				"VisualStudioExptTeam.vscodeintellicode-completions"
+			]
+		}
+	},
+
+	// Comment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "devcontainer"
+}
