@@ -10,7 +10,7 @@
         "/usr/local/include/**",
         // "/usr/local/cuda/include/**",
         "/opt/ros/humble/include/**",
-        "${workspaceFolder}/src/*/include/**"
+        "${workspaceFolder}/install/*/include/**"
       ],
       "name": "ROS",
       "intelliSenseMode": "gcc-x64",
